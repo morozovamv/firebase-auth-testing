@@ -1,16 +1,21 @@
-import styled from '@emotion/styled';
-
-import NxWelcome from './nx-welcome';
-
-const StyledApp = styled.div`
-  // Your style here
-`;
+import { signIn, signOut, useAuthState } from './auth';
 
 export function App() {
+  const { user, loading } = useAuthState();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!user) {
+    return <button onClick={() => signIn()}>sign in</button>;
+  }
+
   return (
-    <StyledApp>
-      <NxWelcome title="auth-testing" />
-    </StyledApp>
+    <div>
+      <div>User:&nbsp;{user.email}</div>
+      <button onClick={() => signOut()}>sign out</button>
+    </div>
   );
 }
 

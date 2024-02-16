@@ -39,3 +39,13 @@ testem.log
 Thumbs.db
 
 .nx/cache
+.firebase
+
+# yarn according to docs - https://yarnpkg.com/getting-started/qa
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
