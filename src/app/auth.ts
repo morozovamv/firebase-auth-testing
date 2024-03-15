@@ -13,7 +13,7 @@ import { useState, useEffect } from 'react';
 
 const firebaseConfig: FirebaseOptions = {
   apiKey: 'AIzaSyAbJ9gyJmuNrPM9hZqM6MlKfNre8TlQC64',
-  authDomain: 'auth--testing.firebaseapp.com',
+  authDomain: 'auth--testing.web.app',
   projectId: 'auth--testing',
   storageBucket: 'auth--testing.appspot.com',
   messagingSenderId: '1099014622325',
